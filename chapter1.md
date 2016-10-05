@@ -73,6 +73,68 @@ print(result2 == powers)
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_function('zip', index=3, do_eval=False, incorrect_msg="exact name of *args variable did not match")
+#test_function('zip', index=3, do_eval=False, incorrect_msg="exact name of *args variable did not match")
+test_function_v2('zip', index=3, do_eval=False, incorrect_msg="exact name of *args variable did not match")
+success_msg("Great work!")
+```
+
+--- type:NormalExercise lang:python xp: skills: key:a669c81599
+## Manual Signatures
+
+*** =pre_exercise_code
+```{python}
+import pandas as pd
+
+# Make DataFrame of iris data
+import sklearn.datasets
+data = sklearn.datasets.load_iris()
+df = pd.DataFrame(data.data, columns=data.feature_names)
+df['species'] = data.target
+df = df.rename(columns={'petal length (cm)': 'petal_length'})
+for i in [0, 1, 2]:
+    df.loc[df['species']==i, 'species'] = data.target_names[i]
+
+df = df[['species', 'petal_length']]
+
+# Extract Series that has versicolor petal lengths
+versicolor_petal_length = df.loc[df.species=='versicolor',
+                                 'petal_length'].values
+```
+
+*** =solution
+```{python}
+# Import plotting modules
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set default Seaborn style
+sns.set()
+
+# Plot histogram of versicolor petal lengths
+_ = plt.hist(versicolor_petal_length)
+
+# Show histogram
+plt.show()
+
+```
+
+*** =sct
+```{python}
+
+test_import("matplotlib.pyplot")
+
+test_import("seaborn")
+
+test_function("seaborn.set")
+
+#sig = sig_from_params(param("x", param.POSITIONAL_OR_KEYWORD))
+
+#test_function_v2("matplotlib.pyplot.hist", params=["x"], not_called_msg="Did you create the histogram using `plt.hist`?", incorrect_msg="Did you pass the correct argument to `plt.hist`?")
+
+
+#test_object("_", undefined_msg="Did you create the histogram as `_`?", incorrect_msg="Did you pass the correct argument to 'plt.hist'?")
+
+test_function("matplotlib.pyplot.show")
+
 success_msg("Great work!")
 ```
