@@ -138,3 +138,35 @@ test_function("matplotlib.pyplot.show")
 
 success_msg("Great work!")
 ```
+
+--- type:NormalExercise lang:python xp: skills: key:2ca71f9e6a
+## Nested list comp
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+matrix = [[col for col in range(5)] for row in range(5)]
+```
+
+*** =solution
+```{python}
+matrix = [[col for col in range(5)] for row in range(5)]
+```
+
+*** =sct
+```{python}
+def inner_list_comp():
+    test_list_comp(body = lambda: test_expression_result(context_vals=[2]),
+                   comp_iter = lambda: test_function('range'))
+test_list_comp(body = inner_list_comp, 
+               comp_iter = lambda: test_function('range'))
+```
