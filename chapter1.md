@@ -170,3 +170,35 @@ def inner_list_comp():
 test_list_comp(body = inner_list_comp, 
                comp_iter = lambda: test_function('range'))
 ```
+
+--- type:NormalExercise lang:python xp: skills: key:efaf7c8360
+## inline if/else in list comp
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+
+```
+
+*** =solution
+```{python}
+L3 = [i**2 if i> 5 else 0 for i in range(0,10)]
+```
+
+*** =sct
+```{python}
+test_list_comp(comp_iter = lambda: test_expression_result(),
+                         body = lambda: test_if_exp(
+                                   body=lambda: test_student_typed(r"\s*i\*\*2\s*"),
+                                   test= lambda: test_expression_result(context_vals = [6]),
+                                   orelse= lambda: test_expression_result()))
+```
