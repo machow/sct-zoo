@@ -4,6 +4,7 @@ title       : Insert the chapter title here
 --- type:NormalExercise lang:python xp: skills: key:ed1f7681ab
 ## test_object using accessor
 
+Note that `test_object_accessed` works as expected, but `test_object` causes an error
 
 *** =instructions
 
