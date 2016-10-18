@@ -36,4 +36,36 @@ X.a
 test_object_accessed('X.a')
 test_object('X.a')
 ```
+
+--- type:NormalExercise lang:python xp: skills: key:75c443b691
+## <<<TITLE>>> 
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+
+```{python}
+
+```
+
+*** =solution
+
+```{python}
+a = 1
+```
+
+*** =sct
+
+```{python}
+test_object('a')
+```
+
 description : Insert the chapter description here
