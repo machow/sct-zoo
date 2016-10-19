@@ -4,6 +4,39 @@ description : Insert the chapter description here
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
+
+
+--- type:NormalExercise lang:python xp: skills: key:1bcc8abeff
+## MY EXERCISE 
+
+
+*** =instructions
+asdf
+
+*** =hint
+asdf
+
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+
+```
+
+*** =solution
+```{python}
+
+```
+
+*** =sct
+```{python}
+
+```
+
 --- type:NormalExercise lang:python xp:100 skills:1 key:b1c43870e7
 ## Testing for *args call in a function signature
 
