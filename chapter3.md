@@ -1,5 +1,5 @@
 ---
-title       : Insert the chapter title here
+title       : Spec Work
 
 --- type:NormalExercise lang:python xp: skills: key:ed1f7681ab
 ## test_object using accessor
