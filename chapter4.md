@@ -2,17 +2,8 @@
 title       : Lambdaless
 
 --- type:NormalExercise lang:python xp: skills: key:7ae8ce7d91
-## <<<TITLE>>> 
+## lambda msg=msg test
 
-
-*** =instructions
-
-*** =hint
-
-*** =pre_exercise_code
-```{python}
-
-```
 
 *** =sample_code
 ```{python}
@@ -38,4 +29,4 @@ test_if_else(1,
              expand_message = False)
              
 ```
-description : Insert the chapter description here
+
