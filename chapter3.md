@@ -53,19 +53,19 @@ test_object('X.a')
 *** =sample_code
 
 ```{python}
-
+for ii in range(2): ii + 1
 ```
 
 *** =solution
 
 ```{python}
-a = 1
+for ii in range(2): ii
 ```
 
 *** =sct
 
 ```{python}
-test_object('a')
+test_for_loop(body=test_expression_result(incorrect_msg='wrong'))
 ```
 
 description : Insert the chapter description here
