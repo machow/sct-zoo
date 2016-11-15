@@ -34,6 +34,36 @@ x = 4
 test_object("y")
 ```
 
+--- type:NormalExercise lang:python xp:100 skills:2 key:f26f4499cf
+## Working Converter (may bleed over)
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{python}
+from bokeh.plotting import figure
+```
+
+*** =sample_code
+```{python}
+p = figure()
+```
+
+*** =solution
+```{python}
+p = figure()
+```
+
+*** =sct
+```{python}
+def converter(obj): return type(obj)
+set_converter('bokeh.plotting.figure.Figure', converter)
+test_object('p')
+```
+
 --- type:NormalExercise lang:python xp:100 skills:2 key:8b1a3d29e9
 ## Converter Fail Build 
 
@@ -61,3 +91,4 @@ p = figure()
 ```{python}
 test_object('p')
 ```
+
