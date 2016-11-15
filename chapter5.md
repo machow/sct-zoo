@@ -33,3 +33,31 @@ x = 4
 ```{python}
 test_object("y")
 ```
+
+--- type:NormalExercise lang:python xp:100 skills:2 key:8b1a3d29e9
+## Converter Fail Build 
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{python}
+from bokeh.plotting import figure
+```
+
+*** =sample_code
+```{python}
+p = figure()
+```
+
+*** =solution
+```{python}
+p = figure()
+```
+
+*** =sct
+```{python}
+test_object('p')
+```
