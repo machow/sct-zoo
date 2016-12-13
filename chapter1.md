@@ -1,5 +1,5 @@
 ---
-title       : Insert the chapter title here
+title       : General
 description : Insert the chapter description here
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
@@ -201,4 +201,37 @@ test_list_comp(comp_iter = lambda: test_expression_result(),
                                    body=lambda: test_student_typed(r"\s*i\*\*2\s*"),
                                    test= lambda: test_expression_result(context_vals = [6]),
                                    orelse= lambda: test_expression_result()))
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2 key:7178ee7c08
+## Regular expression for func call 
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+
+```
+
+*** =solution
+```{python}
+def f(a,b,c): a + b + c
+
+f(b = 2, c = 3, a = 1)
+
+# alternatives ----
+#f(b = 2, b = 2, a = 1)     # repeat argument (should fail)
+```
+
+*** =sct
+```{python}
+test_student_typed(r'f\(((a = 1|b = 2|c = 3)(,\s)*){3}\)')
 ```
